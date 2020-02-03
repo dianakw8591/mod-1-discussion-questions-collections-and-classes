@@ -2,6 +2,23 @@
 
 class Car
 
+    @@all = []
+
+    attr_accessor :make, :model
+    def initialize(hash)
+        @make = hash[:make]
+        @model = hash[:model]
+        @@all << self
+    end
+
+    def self.drive
+        "VROOOOOOOOOOOOM!"
+    end
+
+    def self.all
+        @@all
+    end
+
 
 
 end
